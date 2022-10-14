@@ -6,32 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="javascript.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <title>Document</title>
 </head>
 <body>
-   
-
-<button id="myBtn">Click for Kanye Quote</button>
-
-<p id="quotes">
-
-<script>
-const element = document.getElementById("myBtn");
-element.addEventListener("click", function1); 
-var myurl = "https://api.kanye.rest";
-console.log(myurl);
-function function1{
-fetch(myurl)
-.then(function(response)){
-    console.log(response);
-    return response.json();
-}).then(function(json) {
-        console.log(json);
-        let page = "<p>";
-        page += json["quote"];
-        document.getElementById("quotes").innerHTML = page;
-    });
-}
-</script>
-    
+    <button id="myBtn">Click For Kanye Quote</button>
+>>>>>>> 020abc56e6c820829675362d87205d6e870629e0
+ <div id="getquotes"></div>
 </body>
+
 </html>
