@@ -14,5 +14,18 @@
 >>>>>>> 020abc56e6c820829675362d87205d6e870629e0
  <div id="getquotes"></div>
 </body>
+<footer>
+     <script>
+        const myurl = "https://api.kanye.rest";
+        document.getElementById("myBtn").addEventListener("click", async function() {
+            let response = "";
+            await fetch(myurl).then((response) => response.json()).then((data) => response = (data));
+            console.log(response);
+            const quote = response['quote'];
+            console.log(quote);
+            document.getElementById("getquotes").innerHTML = quote;
+        });
+     </script>
+</footer>
 
 </html>
