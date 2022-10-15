@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript.js"></script>
+    <title>Document</title>
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
     <title>Document</title>
 </head>
 <body>
-    <button id="quote-btn">Click For Kanye Quote</button>
+    <button id="myBtn">Click For Kanye Quote</button>
+    <div id="getquotes"></div>
 
-    <div id="tex-box"></div>
-
-    <footer>
-        <p>
-            This 100% custom website is open source. You can find <span id="github-link">the code</span> on GitHub
-        </p>   
-    </footer>
 </body>
+<footer>
+    
+</footer>
+     <script>
+        const myurl = "https://api.kanye.rest";
+        document.getElementById("myBtn").addEventListener("click", async function() {
+            let response = "";
+            await fetch(myurl).then((response) => response.json()).then((data) => response = (data));
+            console.log(response);
+            const quote = response['quote'];
+            console.log(quote);
+            document.getElementById("getquotes").innerHTML = quote;
+        });
+     </script>
+
 </html>
