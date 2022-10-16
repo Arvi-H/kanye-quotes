@@ -1,43 +1,81 @@
 body {
-    width: 100%;
-    height: 100%;
-
-    background-image: url("kanyeWeb.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-#quote-btn {
-    background-color: #4CAF50;  
-    color: white;
-    
-    text-decoration: none;
-    border: none;
-
-    padding: 15px 32px;
-    font-size: 16px;
-
-    cursor: pointer;
-}
-
-/* footer {
-    text-align: center;
-    position: absolute;
-
-    bottom: 0;
-    width: 100%;
-
     margin: 0;
     padding: 0;
 
-    padding: 10px;  
-} 
-*/
+    width: 100%;
+    height: 100%;
 
-@media only screen and (max-width: 600px) {
-    body {
-        background-image: url("kanye.png");
-        background-repeat: no-repeat;
-    }
+    background-color: rgb(194, 194, 194);
+} 
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 35%;
+    z-index: -1;
 }
 
+.k-q {
+    font-size: 400%;
+    font-weight: 500;
+}
+
+#name {
+    float: left;
+    margin-left: 6%;
+    margin-top: 4%;
+}
+
+#quotes {
+    float: right;
+    margin-right: 6%;
+    margin-top: 4%;
+}
+
+#myBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin-top: 22px;
+
+    background-color: rgb(77, 77, 77);
+    color: rgb(213, 213, 97);
+    
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+ 
+#getquotes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin-top: 130px;
+
+    text-align: center;
+    width: 190px;
+    font-size: 120%;
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    
+    bottom: 0;
+    width: 100%;
+    
+    margin: 0;
+    padding: 0;
+    
+    padding: 10px;  
+} 
+
+@media only screen and (max-width: 500px) {
+} 
